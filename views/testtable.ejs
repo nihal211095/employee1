@@ -1,0 +1,24 @@
+<html><body>
+    <table border="1" cellpadding="7" cellspacing="7">
+      <tr>
+        <th width="50px">Id</th>
+        <th>Name</th>
+        <th>Dept</th>
+        <th>Salary</th>
+      </tr>
+      <% if(data.length){ 
+        for(var i = 0;i < data.length;i++) { %>
+      <tr>
+        <td><%=(i+1)%></td>
+        <td><%=data[i].name%></td>
+        <td><%=data[i].dept%></td>
+        <td><%=data[i].salary%></td>
+      </tr>
+      <% }
+      }else{ %>
+      <tr>
+        <td colspan="3">user</td>
+      </tr>
+    <% } %>
+    </table>
+    </body></html>
